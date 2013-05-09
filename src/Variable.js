@@ -26,12 +26,20 @@ c.AbstractVariable = c.inherit({
       if (typeof args.prefix != "undefined") {
         this._prefix = args.prefix;
       }
+      if (typeof args.identifier != "undefined") {
+        this._identifier = args.identifier;
+      }
+      if (typeof args.tag != "undefined") {
+        this._tag = args.tag;
+      }
     }
   },
 
   _prefix: "",
   name: "",
   value: 0,
+  _tag:0,
+  _identifier:null,
 
   valueOf: function() { return this.value; },
 
